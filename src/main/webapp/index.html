@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>期末大作业</title>
+	<link type="text/css" rel="stylesheet" href="css/style.css">
+</head>
+<style>
+	#logo{
+            position: relative;
+            top: 1%;
+            left: 5%;
+        }
+	#name{
+            position: absolute;
+            top: 0%;
+            right: 30%;
+            font-size: 20px;
+    }
+    #key{
+        position: absolute;
+        top: 10%;
+        right: 2%;
+        font-size: 20px;
+    }
+</style>
+<body>
+	<div id="top">
+		<img id="logo" src="logo.png" width="250px">
+		<div id="name"><h1>基于Java的Web开发期末大作业</h1></div>
+        <div id="key"><a href="manageLogin.jsp">管理员登录</a></div>
+	</div>
+	<div id="navigation">
+        <a style="font-size: 30px;color: rgb(255, 255, 255);position: relative; ;left: 20%;" href="个人简介/个人简历.html" target="mainbody">个人简介</a>
+		<a style="font-size: 30px;color: rgb(255, 255, 255);position: relative; ;left: 25%;" href="AllFoodServlet?panduan=1" target="mainbody">建德美食</a>
+        <a style="font-size: 30px;color: rgb(255, 255, 255);position: relative; ;left: 30%;" href="AllViewServlet?panduan=1" target="mainbody">建德美景</a>
+        <a style="font-size: 30px;color: rgb(255, 255, 255);position: relative; ;left: 35%;" href="AllPeopleServlet?panduan=1" target="mainbody">建德人文</a>
+	</div>
+	<div id="mainbody">
+        <iframe src="个人简介/个人简历.html" style = "border: medium none;" name="mainbody" frameborder="1" width="100%"  scrolling="no" height="100%"></iframe>
+    </div>
+</body>
+</html>

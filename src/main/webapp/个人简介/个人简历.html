@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人简介</title>
+</head>
+<style>
+    #left{
+    position:absolute;
+    left:0%;
+    top:0%;
+    width: 20%;
+    height: 100%;
+    background-color: black;
+    }
+    a{
+    color:white;
+    font-size: 20px;
+    text-decoration:none;
+    }
+    #right{
+    position:absolute;
+    left:20%;
+    top:0%;
+    width: 80%;
+    height: 100%;
+    }
+</style>
+<body>
+    <div id="left">
+        <h1 style="color:rgb(255, 255, 255); position: relative; left: 10%;">个人简历</h1>
+        <p style="position: relative; left: 10%;"><a href="introduce.html" target="body1">个人信息</a></p>
+        <p style="position: relative; left: 10%;"><a href="study.html" target="body1">求学经历</a></p>
+        <p style="position: relative; left: 10%;"><a href="practice.html" target="body1">社会实践</a></p>
+        <p style="position: relative; left: 10%;"><a href="work.html" target="body1">技能特长</a></p>
+        <p style="position: relative; left: 10%;"><a href="award.html" target="body1">获奖情况</a></p>
+    </div>
+    <div id="right">
+            <iframe name="body1"frameborder="0" src="introduce.html" width="100%"  scrolling="no" height="100%"></iframe>
+    </div>
+</body>
+</html>

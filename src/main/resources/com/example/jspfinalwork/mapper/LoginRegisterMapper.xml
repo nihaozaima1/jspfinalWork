@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.jspfinalwork.mapper.LoginRegisterMapper">
+    <select id="checkAccount" resultType="boolean">
+        SELECT 1 FROM [dbo].[info] WHERE username = #{username} AND password = #{ipassword}
+    </select>
+
+    <select id="getId" resultType="String">
+        SELECT id FROM [dbo].[food]
+    </select>
+
+    <insert id="beginResign">
+        INSERT INTO [dbo].[info] (username, password, email, telephone)
+        VALUES (#{username}, #{password}, #{email}, #{telephone})
+    </insert>
+</mapper>

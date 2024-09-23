@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- foodMapper.xml -->
+
+<mapper namespace="com.example.jspfinalwork.mapper.FoodMapper">
+    <resultMap id="foodResultMap" type="com.example.jspfinalwork.pojo.food">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="origin" column="origin"/>
+        <result property="introduce" column="introduce"/>
+        <result property="b" column="picture"/>
+    </resultMap>
+
+    <select id="getFoodInformation" resultMap="foodResultMap" parameterType="String">
+        SELECT * FROM [dbo].[food] WHERE name LIKE CONCAT('%', #{fname}, '%')
+    </select>
+
+    <select id="getAllFood" resultMap="foodResultMap">
+        SELECT * FROM [dbo].[food]
+    </select>
+
+    <delete id="deleteFood" parameterType="String">
+        DELETE FROM [dbo].[food] WHERE id = #{id}
+    </delete>
+
+    <update id="changeFood" parameterType="com.example.jspfinalwork.pojo.food">
+        UPDATE [dbo].[food] SET name = #{name}, origin = #{origin}, introduce = #{introduce} WHERE id = #{id}
+    </update>
+
+    <insert id="insertFood" parameterType="com.example.jspfinalwork.pojo.food">
+        INSERT INTO [dbo].[food] (id, name, origin, introduce) VALUES (#{id}, #{name}, #{origin}, #{introduce})
+    </insert>
+
+    <update id="updatePicture" parameterType="java.util.Map">
+        <![CDATA[UPDATE [dbo].[food] SET picture =#{pictureInputSteam} WHERE id = #{id}]]>
+    </update>
+</mapper>

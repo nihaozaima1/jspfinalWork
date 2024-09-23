@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="jspfinalwork:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>jspfinalwork</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="jspfinalwork-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="jspfinalwork:war exploded" />
+    </root>
+  </artifact>
+</component>

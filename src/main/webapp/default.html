@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="css/style1.css">
+</head>
+<body onload="fakeProgress(0)">
+    <div class="box">
+        <div>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <progress style="position: absolute; left: 32%; top: 50%;"></progress>
+    <p style="position: absolute; left: 33%; top: 50.5%;">loading...</p>
+</body>
+<script type="text/javascript">
+    function fakeProgress(v) {
+        if (v > 100)
+            location.href = "个人简历/个人简历.html";
+        else {
+            window.setTimeout("fakeProgress(" + (++v) + ")", 50);
+        }
+    }
+</script>
+</html>
